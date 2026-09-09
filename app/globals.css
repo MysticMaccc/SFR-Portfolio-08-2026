@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --ios-blue: #007aff;
+  --ios-green: #34c759;
+  --ios-orange: #ff9500;
+  --ios-red: #ff3b30;
+  --ios-purple: #af52de;
+  --text-primary: #1c1c1e;
+  --text-secondary: #636366;
+  --text-tertiary: #8e8e93;
+  --border: #e5e5ea;
+  --surface: #ffffff;
+  --surface-secondary: #f2f2f7;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Display", "Segoe UI",
+    sans-serif;
+  background: #ffffff;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================
+   Base card
+   ======================== */
+.card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+/* Keep glass-card alias for compatibility */
+.glass-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+/* ========================
+   Navigation
+   ======================== */
+.ios-nav {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+/* ========================
+   Buttons
+   ======================== */
+.ios-btn-primary {
+  background: var(--ios-blue);
+  color: #ffffff;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+}
+
+.ios-btn-primary:hover {
+  opacity: 0.85;
+}
+
+.ios-btn-primary:active {
+  opacity: 0.7;
+}
+
+.ios-btn-secondary {
+  background: transparent;
+  color: var(--ios-blue);
+  border: 1.5px solid var(--ios-blue);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 9px 20px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+}
+
+.ios-btn-secondary:hover {
+  background: rgba(0, 122, 255, 0.06);
+}
+
+/* ========================
+   Inputs
+   ======================== */
+.ios-input {
+  background: var(--surface-secondary);
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 0.92rem;
+  font-family: inherit;
+  color: var(--text-primary);
+  width: 100%;
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.ios-input:focus {
+  background: #ffffff;
+  border-color: var(--ios-blue);
+}
+
+.ios-input::placeholder {
+  color: var(--text-tertiary);
+}
+
+/* ========================
+   Section label
+   ======================== */
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 8px;
+}
+
+/* ========================
+   Skill pill
+   ======================== */
+.skill-pill {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* ========================
+   Scrollbar
+   ======================== */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+/* ========================
+   Text selection
+   ======================== */
+::selection {
+  background: rgba(0, 122, 255, 0.15);
+}
